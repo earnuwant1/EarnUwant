@@ -1,364 +1,343 @@
 <!doctype html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>EarnUwant — Authentic Social Growth & UGC Marketing</title>
-  <meta name="description" content="EarnUwant helps brands grow with authentic UGC, influencer programs, compliant reviews, and SEO — while creating flexible earning opportunities for real people." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EarnUwant — Growth that feels real</title>
+  <meta name="description" content="EarnUwant: Social + Google growth जो असली, घोषित और सत्यापनीय हो; Earners के लिए free signup और सरल माइक्रो‑टास्क।" />
+  <meta name="theme-color" content="#12d6df" />
+  <meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_CODE" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="EarnUwant — Authentic Social Growth & UGC Marketing" />
-  <meta property="og:description" content="Real engagement, transparent pricing, and compliance-first social growth." />
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="EarnUwant — Growth that feels real" />
+  <meta property="og:description" content="Google Maps/Reviews/GBP + YouTube/Instagram और अधिक — सब कुछ एक ही जगह; Free signup for earners." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og.jpg" />
-  <meta property="og:url" content="https://www.earnuwant.com" />
-  <!-- Twitter -->
+  <meta property="og:image" content="assets/img/earnuwant.PNG" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/img/earnuwant.PNG" />
+  <link rel="apple-touch-icon" href="assets/img/earnuwant.PNG" />
 
-  <!-- Fonts: self-host for production -->
+  <!-- Fonts preload hooks; actual CSS बाद में -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Minimal reset + variables -->
-  <style>
-    :root{
-      --bg:#0b0f17;
-      --card:#121826;
-      --muted:#9aa4b2;
-      --text:#e6e9ef;
-      --accent:#6ee7b7;
-      --accent-2:#22d3ee;
-      --danger:#ef4444;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:14px;
-      --max:1200px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0a0e16 0%,#0b1220 100%);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    img{max-width:100%;display:block}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;background:rgba(11,15,23,.6);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);box-shadow:var(--shadow)}
-    .brand b{font-weight:800;letter-spacing:.2px}
-    .menu{display:flex;gap:18px}
-    .menu a{color:var(--muted)}
-    .menu a:hover{color:var(--text)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);color:#051014;font-weight:700;box-shadow:var(--shadow)}
-    .btn--ghost{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--text)}
-    .btn--ghost:hover{border-color:rgba(255,255,255,.3)}
-    .hero{padding:72px 0 36px}
-    .grid{display:grid;gap:28px}
-    .hero-grid{grid-template-columns:1.2fr .8fr}
-    @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
-    h1{font-size:46px;line-height:1.1;margin:14px 0 12px}
-    h2{font-size:28px;margin:0 0 10px}
-    p.lead{font-size:18px;color:var(--muted)}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(110,231,183,.14);color:var(--accent);border:1px solid rgba(110,231,183,.35);padding:6px 10px;border-radius:99px;font-weight:700}
-    .hero-card{background:radial-gradient(1200px 400px at 80% -10%,rgba(34,211,238,.18),transparent 60%),var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
-    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
-    @media(max-width:800px){.kpis{grid-template-columns:repeat(2,1fr)}}
-    .kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px}
-    .section{padding:56px 0}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    @media(max-width:960px){.cards{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
-    .icon{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:grid;place-items:center;color:#051014;font-weight:800}
-    .list{margin:10px 0;padding:0;list-style:none}
-    .list li{margin:8px 0;color:var(--muted)}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    @media(max-width:960px){.split{grid-template-columns:1fr}}
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    @media(max-width:960px){.pricing{grid-template-columns:1fr}}
-    .price{position:relative;overflow:hidden}
-    .price .tag{position:absolute;top:14px;right:-20px;transform:rotate(15deg);background:rgba(110,231,183,.2);color:var(--accent);padding:6px 16px;border:1px solid rgba(110,231,183,.4);border-radius:8px}
-    .faq details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px}
-    .faq summary{cursor:pointer;font-weight:700}
-    .footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
-    .note{font-size:12px;color:var(--muted)}
-    .cta-band{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(110,231,183,.12));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
-    /* accessibility focus */
-    :focus-visible{outline:3px solid var(--accent-2);outline-offset:2px;border-radius:6px}
-  </style>
-
-  <!-- Structured data: Organization + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"EarnUwant",
-    "url":"https://www.earnuwant.com",
-    "logo":"https://www.earnuwant.com/assets/logo.png",
-    "sameAs":[
-      "https://www.instagram.com/earnuwant",
-      "https://www.linkedin.com/company/earnuwant",
-      "https://x.com/earnuwant"
-    ],
-    "description":"Social media and UGC marketing that powers authentic growth for brands while enabling flexible earning opportunities."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Is EarnUwant compliant with platform policies?","acceptedAnswer":{"@type":"Answer","text":"Yes. We prohibit fake engagement and incentivized reviews that violate platform rules, and require proper ad disclosures."}},
-      {"@type":"Question","name":"Who can earn on EarnUwant?","acceptedAnswer":{"@type":"Answer","text":"Anyone with a smartphone and internet who follows our authenticity and disclosure guidelines can participate."}},
-      {"@type":"Question","name":"Do you offer Google Reviews?","acceptedAnswer":{"@type":"Answer","text":"We do not sell reviews. We only help brands collect feedback from genuine customers through fair, compliant flows."}}
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css"
 </head>
 <body>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="EarnUwant Home">
-        <img scr="assets/logo.png" alt="EarnUwant logo" class="logo-image"></img>
-        <b>EarnUwant</b>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="EarnUwant Home">
+        <img src="assets/img/earnuwant.PNG" alt="EarnUwant Logo" width="50" height="50" />
+        <span>EarnUwant</span>
       </a>
-      <nav class="menu" aria-label="Section links">
-        <a href="#services">Services</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="#solutions">Solutions</a>
+        <a href="#google">Google</a>
+        <a href="#social">Social</a>
+        <a href="#proof">Proof</a>
         <a href="#workers">Earners</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faqs">FAQs</a>
-        <a class="btn btn--ghost" href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
+      <button class="hamburger" aria-label="Menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="grid hero-grid">
-        <div>
-          <span class="badge">Compliance‑first growth</span>
-          <h1>Authentic Social Growth for Brands. Real Earning for People.</h1>
-          <p class="lead">Scale with UGC, influencer ops, SEO, and transparent analytics—no fake bots, no shady reviews, only measurable outcomes and policy‑safe campaigns.</p>
-          <div style="display:flex;gap:12px;margin:18px 0 10px">
-            <a class="btn" href="#contact">Get Proposal</a>
-            <a class="btn btn--ghost" href="#workers">Start Earning</a>
+  <main id="main">
+    <!-- Hero: bold promise + free badge -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="badge">Free to join • No fees</p>
+          <h1 id="hero-title">Real growth that audiences feel — across Social + Google</h1>
+          <p class="lead">Brands get disclosed, verifiable engagement and measurable ROI; earners get flexible, zero‑fee opportunities.</p>
+          <div class="cta-row">
+            <a href="#contact" class="btn">Get proposal</a>
+            <a href="#workers" class="btn btn-outline">Start free</a>
           </div>
-          <div class="kpis" aria-label="Key results">
-            <div class="kpi"><h3 style="margin:0">+312%</h3><p class="note">Avg. content reach uplift (3 months)</p></div>
-            <div class="kpi"><h3 style="margin:0">-68%</h3><p class="note">Fraudulent engagement reduced</p></div>
-            <div class="kpi"><h3 style="margin:0">+2.3x</h3><p class="note">Creator‑assisted conversions</p></div>
-            <div class="kpi"><h3 style="margin:0">24×7</h3><p class="note">Client support</p></div>
-          </div>
+          <ul class="hero-points">
+            <li>Policy‑compliant strategies</li>
+            <li>Clear reporting & dashboards</li>
+            <li>24×7 human support</li>
+          </ul>
         </div>
-        <div class="hero-card" role="img" aria-label="Product preview">
-          <img src="assets/hero-dashboard.png" alt="EarnUwant dashboard preview with campaign analytics and UGC rights tracking" />
+        <div class="hero-right">
+          <figure class="hero-card" aria-label="Brand highlight">
+            <img src="assets/img/earnuwant.PNG" alt="EarnUwant Symbol" width="72" height="72" />
+            <figcaption>
+              <h3>Verified results</h3>
+              <p>No bots, no tricks — only transparent performance.</p>
+            </figcaption>
+          </figure>
+          <div class="hero-stats" aria-label="Key metrics">
+            <div class="stat"><span>1,200+</span><em>campaigns</em></div>
+            <div class="stat"><span>98%</span><em>retention</em></div>
+            <div class="stat"><span>50,000+</span><em>earners</em></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section container">
-      <h2>What We Do</h2>
-      <p class="lead">From UGC to SEO to influencer programs, everything is built for compliance, attribution, and real outcomes.</p>
-      <div class="cards">
-        <article class="card">
-          <div class="icon" aria-hidden="true">U</div>
-          <h3>UGC & Creators</h3>
-          <ul class="list">
-            <li>Briefs, rights & consent tracking</li>
-            <li>Ad‑ready content with clear disclosures</li>
-            <li>Audience authenticity checks</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon" aria-hidden="true">S</div>
-          <h3>Social Growth</h3>
-          <ul class="list">
-            <li>Instagram, YouTube, LinkedIn ops</li>
-            <li>Community management & moderation</li>
-            <li>Performance dashboards</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon" aria-hidden="true">R</div>
-          <h3>Reputation & SEO</h3>
-          <ul class="list">
-            <li>Post‑purchase review flows (no incentives)</li>
-            <li>Local search & technical SEO</li>
-            <li>Content & site builds</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="workers" class="section container">
-      <div class="split">
-        <div>
-          <h2>Earn with Real Tasks</h2>
-          <p class="lead">Flexible micro‑gigs like UGC creation, testing products, and community Q&A—no fake likes, no review buying, always transparent.</p>
-          <ul class="list">
-            <li>Create short videos, reels, graphics</li>
-            <li>Test and share honest experiences</li>
-            <li>Answer community questions</li>
-          </ul>
-          <div style="display:flex;gap:12px;margin-top:8px">
-            <a class="btn" href="#contact">Apply as Earner</a>
-            <a class="btn btn--ghost" href="#faqs">Read Guidelines</a>
-          </div>
-          <p class="note">All contributors agree to authenticity, disclosure, and content rights policies.</p>
-        </div>
-        <div class="hero-card">
-          <img src="assets/earners.png" alt="Creators collaborating on content briefs with mobile phones" />
+    <!-- Solutions overview -->
+    <section id="solutions" class="section" aria-labelledby="sol-title">
+      <div class="container">
+        <h2 id="sol-title">What we solve</h2>
+        <p class="section-sub">Acquisition, trust, and retention — stitched together.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Acquisition</h3>
+            <p>Channel‑fit creatives, media mix, and landing flows tuned for qualified conversions.</p>
+          </article>
+          <article class="card">
+            <h3>Trust</h3>
+            <p>Disclosed collaborations, authentic reviews, and brand‑safe community programs.</p>
+          </article>
+          <article class="card">
+            <h3>Retention</h3>
+            <p>CRM nudges, remarketing, and content cadence that compounds results.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="cta-band">
+    <!-- Google services -->
+    <section id="google" class="section alt" aria-labelledby="google-title">
+      <div class="container">
+        <h2 id="google-title">Google services</h2>
+        <p class="section-sub">Maps, Reviews, Business Profile, Local SEO, Search Console/GA4, Ads, YouTube Monetization.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Maps listing</h3>
+            <p>GBP setup/claim, categories, NAP, photos, posts, Q&A, messaging — end‑to‑end.</p>
+          </article>
+          <article class="card">
+            <h3>Reviews engine</h3>
+            <p>Authentic review workflows with compliant prompts and transparent disclosures.</p>
+          </article>
+          <article class="card">
+            <h3>Local SEO</h3>
+            <p>Citations, local keywords, content updates, and discovery boost.</p>
+          </article>
+          <article class="card">
+            <h3>Search Console + GA4</h3>
+            <p>Index health, performance insights, and conversion tracking.</p>
+          </article>
+          <article class="card">
+            <h3>Google Ads</h3>
+            <p>Search/PMAX campaigns with budget guardrails and clean attribution.</p>
+          </article>
+          <article class="card">
+            <h3>YouTube monetization</h3>
+            <p>Eligibility audit, format mix, and RPM‑oriented content playbooks.</p>
+          </article>
+        </div>
         <div class="split">
           <div>
-            <h2>Why Choose EarnUwant</h2>
-            <ul class="list">
-              <li>Real engagement, never bots or click‑farms</li>
-              <li>Transparent pricing and live tracking</li>
-              <li>Dedicated experts and 24×7 support</li>
+            <h3>Why Google with us</h3>
+            <ul class="bullets">
+              <li>Policy‑aligned methods and disclosures</li>
+              <li>Measurable outcomes and dashboards</li>
+              <li>Faster local discovery and trust</li>
             </ul>
           </div>
-          <div style="display:grid;place-items:center">
-            <a class="btn" href="#contact">Book Strategy Call</a>
+          <aside class="panel">
+            <p class="muted">Add Maps/GBP preview image at ./assets/img/maps-preview.png</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social services -->
+    <section id="social" class="section" aria-labelledby="social-title">
+      <div class="container">
+        <h2 id="social-title">Social services</h2>
+        <p class="section-sub">YouTube, Instagram, Facebook, X, Threads, Snapchat — built for real people.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>YouTube growth</h3>
+            <p>Watch‑hours, subscribers, video SEO; policy‑compliant growth ops.</p>
+          </article>
+          <article class="card">
+            <h3>IG + FB</h3>
+            <p>Reels reach, comments, community management, social care.</p>
+          </article>
+          <article class="card">
+            <h3>X / Threads / SC</h3>
+            <p>Brand‑safe amplification and creator collaborations.</p>
+          </article>
+          <article class="card">
+            <h3>Content studio</h3>
+            <p>Graphics, shorts, voice‑over, animation — rights‑cleared assets.</p>
+          </article>
+          <article class="card">
+            <h3>Web + SEO</h3>
+            <p>Modern sites, technical SEO, conversion content and CRO.</p>
+          </article>
+          <article class="card">
+            <h3>Community ops</h3>
+            <p>Moderation, support, and transparent reporting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof / Outcomes -->
+    <section id="proof" class="section alt" aria-labelledby="proof-title">
+      <div class="container">
+        <h2 id="proof-title">Proof of outcomes</h2>
+        <p class="section-sub">Case snapshots that speak for themselves.</p>
+        <div class="grid grid-3">
+          <article class="card quote">
+            <p>“Maps visibility up 3×, reviews doubled in 60 days — without risking policy.”</p>
+            <p class="by">— Local chain</p>
+          </article>
+          <article class="card quote">
+            <p>“YouTube sessions +41%, RPM stable; reporting is crystal clear.”</p>
+            <p class="by">— Creator brand</p>
+          </article>
+          <article class="card quote">
+            <p>“Reels scaled with safety, and customer care got faster.”</p>
+            <p class="by">— D2C founder</p>
+          </article>
+        </div>
+        <div class="cta-center">
+          <a href="#contact" class="btn">See a tailored plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Earners (Free signup) -->
+    <section id="workers" class="section" aria-labelledby="workers-title">
+      <div class="container">
+        <h2 id="workers-title">Earners — join free</h2>
+        <div class="split">
+          <aside class="panel">
+            <p class="muted">Add app mockup at ./assets/img/app-mock.png</p>
+          </aside>
+          <div>
+            <p class="lead">Zero fees. Flexible micro‑tasks. On‑time payouts.</p>
+            <ul class="bullets">
+              <li>Start with just a smartphone + internet</li>
+              <li>Tasks: like, share, review, subscribe, short‑watch</li>
+              <li>Training and real human support</li>
+            </ul>
+            <a href="#apply" class="btn btn-outline">Apply free</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="pricing" class="section container">
-      <h2>Pricing</h2>
-      <p class="lead">Simple plans that scale—from starter campaigns to full UGC ops.</p>
-      <div class="pricing">
-        <article class="card price">
-          <span class="tag">Starter</span>
-          <h3>Launch</h3>
-          <p class="lead">Best for early traction</p>
-          <ul class="list">
-            <li>Channel setup & content calendar</li>
-            <li>10 UGC assets/month (rights-included)</li>
-            <li>Basic analytics & reporting</li>
-          </ul>
-          <a class="btn" href="#contact">Choose Launch</a>
-        </article>
-        <article class="card price">
-          <span class="tag">Popular</span>
-          <h3>Scale</h3>
-          <p class="lead">For multi-channel growth</p>
-          <ul class="list">
-            <li>30 UGC assets + creator program</li>
-            <li>Community management</li>
-            <li>Attribution & conversions dashboard</li>
-          </ul>
-          <a class="btn" href="#contact">Choose Scale</a>
-        </article>
-        <article class="card price">
-          <span class="tag">Pro Max</span>
-          <h3>Enterprise</h3>
-          <p class="lead">Advanced compliance & ops</p>
-          <ul class="list">
-            <li>Custom UGC studio & paid rights</li>
-            <li>Compliance reviews & audits</li>
-            <li>Quarterly growth sprints</li>
-          </ul>
-          <a class="btn" href="#contact">Choose Enterprise</a>
-        </article>
+    <!-- Apply form (HTML only; JS बाद में) -->
+    <section id="apply" class="section" aria-labelledby="apply-title">
+      <div class="container">
+        <h2 id="apply-title">Apply as an Earner</h2>
+        <form id="workerForm" class="form" method="post">
+          <div class="grid form-grid">
+            <div class="form-field">
+              <label for="w-name">Full Name</label>
+              <input id="w-name" type="text" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="w-email">Email</label>
+              <input id="w-email" type="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="w-phone">Phone</label>
+              <input id="w-phone" type="tel" name="phone" required />
+            </div>
+            <div class="form-field">
+              <label for="w-location">Location</label>
+              <input id="w-location" type="text" name="location" />
+            </div>
+            <div class="form-field">
+              <label for="w-platforms">Platforms</label>
+              <select id="w-platforms" name="platforms" multiple>
+                <option>YouTube</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>X (Twitter)</option>
+                <option>Threads</option>
+                <option>Snapchat</option>
+              </select>
+            </div>
+            <div class="form-field span-2">
+              <label for="w-notes">Experience / Notes</label>
+              <textarea id="w-notes" name="notes" rows="4" placeholder="Tell us about your experience..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn">Submit Application</button>
+          <p class="muted tiny">Free signup. By submitting, you agree to our Terms and Privacy Policy.</p>
+        </form>
       </div>
     </section>
 
-    <section id="faqs" class="section container faq">
-      <h2>FAQs</h2>
-      <details>
-        <summary>Do you buy likes or followers?</summary>
-        <p>No. We focus on authentic growth, content quality, and audience fit; we never use bots or click‑farms.</p>
-      </details>
-      <details>
-        <summary>Can you get Google reviews fast?</summary>
-        <p>No paid reviews. We help set up fair, post‑purchase review requests for genuine customers.</p>
-      </details>
-      <details>
-        <summary>How do earners get paid?</summary>
-        <p>Per‑task payouts with clear briefs, deadlines, and acceptance criteria. Late or low‑quality work isn't approved.</p>
-      </details>
-      <details>
-        <summary>What about disclosures?</summary>
-        <p>All compensated content requires clear disclosure and adherence to platform rules.</p>
-      </details>
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Frequently asked</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>क्या प्लेटफ़ॉर्म जॉइन करना मुफ़्त है?</h3>
+            <p>हाँ, EarnUwant पर जॉइनिंग <strong>मुफ़्त</strong> है; कोई upfront फीस नहीं, सिर्फ़ वैध माइक्रो‑टास्क।</p>
+          </article>
+          <article class="card">
+            <h3>Google सेवाएं क्या‑क्या हैं?</h3>
+            <p>Maps/Reviews/GBP, Local SEO, Search Console/GA4, Ads और YouTube monetization end‑to‑end।</p>
+          </article>
+          <article class="card">
+            <h3>क्या सब कुछ पॉलिसी‑अनुरूप है?</h3>
+            <p>हाँ, disclosed/transparent ऑपरेशन और साफ reporting — no bots, no fake counts.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section container">
-      <h2>Contact Us</h2>
-      <p class="lead">Get a custom plan in 24 hours.</p>
-      <form class="card" action="https://formspree.io/f/your-form-id" method="POST">
+    <!-- Contact -->
+    <section id="contact" class="section alt" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
         <div class="split">
           <div>
-            <label for="name">Name</label><br/>
-            <input id="name" name="name" required placeholder="Full name" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0f1524;color:var(--text)"/>
+            <h3>Email</h3>
+            <p><a href="mailto:contact.earnuwant@gmail.com">contact.earnuwant@gmail.com</a></p>
+            <h3>Social</h3>
+            <p class="muted">Add links later (IG/YouTube/X).</p>
           </div>
-          <div>
-            <label for="email">Email</label><br/>
-            <input id="email" type="email" name="email" required placeholder="name@company.com" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0f1524;color:var(--text)"/>
-          </div>
+          <form id="contactForm" class="form" method="post">
+            <div class="form-field">
+              <label for="c-name">Name</label>
+              <input id="c-name" type="text" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="c-email">Email</label>
+              <input id="c-email" type="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <p class="muted tiny">We reply within 24 hours.</p>
+          </form>
         </div>
-        <div class="split">
-          <div>
-            <label for="company">Company</label><br/>
-            <input id="company" name="company" placeholder="Company / brand" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0f1524;color:var(--text)"/>
-          </div>
-          <div>
-            <label for="plan">Plan</label><br/>
-            <select id="plan" name="plan" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0f1524;color:var(--text)">
-              <option>Launch</option>
-              <option>Scale</option>
-              <option>Enterprise</option>
-              <option>Custom</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label for="message">Project details</label><br/>
-          <textarea id="message" name="message" rows="5" placeholder="Goals, channels, timeline..." style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#0f1524;color:var(--text)"></textarea>
-        </div>
-        <div style="display:flex;gap:12px;align-items:center">
-          <input type="checkbox" id="consent" required />
-          <label for="consent" class="note">I agree to the Terms and confirm I have read the Privacy Policy.</label>
-        </div>
-        <div style="margin-top:12px">
-          <button class="btn" type="submit">Request Proposal</button>
-        </div>
-        <p class="note">We never sell personal data. Unsubscribe anytime.</p>
-      </form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container split">
-      <div>
-        <div class="brand" style="margin-bottom:8px">
-          <span class="logo" aria-hidden="true"></span>
-          <b>EarnUwant</b>
-        </div>
-        <p class="note">Authentic growth for brands; fair, transparent earnings for people.</p>
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container foot-wrap">
+      <div class="foot-brand">
+        <img src="assets/img/earnuwant.PNG" alt="EarnUwant Logo" width="22" height="22" />
+        <span>EarnUwant</span>
       </div>
-      <div>
-        <nav class="list" aria-label="Footer">
-          <a href="#services">Services</a><br/>
-          <a href="#workers">Earners</a><br/>
-          <a href="#pricing">Pricing</a><br/>
-          <a href="#faqs">FAQs</a><br/>
-          <a href="/privacy.html">Privacy Policy</a><br/>
-          <a href="/terms.html">Terms & Conditions</a>
-        </nav>
-      </div>
-      <div>
-        <p class="note">© <span id="year"></span> EarnUwant. All rights reserved.</p>
-      </div>
+      <p class="muted tiny">© 2025 EarnUwant. All rights reserved.</p>
     </div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
   </footer>
+  <script src="assets/app.js"></script>
 </body>
 </html>
-
